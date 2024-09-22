@@ -23,9 +23,7 @@
     <!-- External stylesheet -->
     <link rel="stylesheet" href="./style.css" />
 
-    <title>
-      Frontend Mentor | Fylo landing page with dark theme and features grid
-    </title>
+    <title>Fylo landing page with dark theme and features grid</title>
   </head>
   <body>
     <header>
@@ -35,18 +33,22 @@
         </div>
         <nav>
           <ul>
-            <li>Features</li>
-            <li>Team</li>
-            <li>Sign In</li>
+            <li>
+              <a href="#features">Features</a>
+            </li>
+            <li>
+              <a href="#testimonials">Team</a>
+            </li>
+            <li>
+              <a href="#sign-up">Sign In</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <div class="container">
-        <section class="hero">
-          <div class="image">
+         <section class="hero">
             <img src="./images/illustration-intro.png" alt="Intro image" />
           </div>
           <div class="content">
@@ -59,8 +61,10 @@
             <button>Get Started</button>
           </div>
         </section>
-
-        <div class="features">
+        
+      <div class="container">
+        <!-- Features Start -->
+        <section id="features" class="features">
           <div class="feature">
             <div class="image">
               <img
@@ -121,8 +125,10 @@
               </p>
             </div>
           </div>
-        </div>
+        </section>
+        <!-- Features End -->
 
+        <!-- Productive Start -->
         <section class="productive">
           <div class="image">
             <img
@@ -136,10 +142,19 @@
               Never let location be an issue when accessing your files. Fylo has
               you covered for all of your file storage needs.
             </p>
+
+            <p>
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required.
+            </p>
+
+            <a href="#">See how Fylo works <span class="arrow">&rarr;</span></a>
           </div>
         </section>
+        <!-- Productive End -->
 
-        <section class="testimonials">
+        <!-- Testimonials Start -->
+        <section id="testimonials" class="testimonials">
           <div class="testimonial">
             <p>
               Fylo has improved our team productivity by an order of magnitude.
@@ -185,12 +200,13 @@
             </div>
           </div>
         </section>
+        <!-- Testimonials End -->
       </div>
     </main>
 
     <footer>
       <div class="container">
-        <div class="form">
+        <div id="sign-up" class="form">
           <h2>Get early access today</h2>
           <p>
             It only takes a minute to sign up and our free starter tier is
@@ -217,15 +233,17 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
-            <div>
-              <i class="fa-solid fa-phone-volume"></i>
-              <p>+1-543-123-4567</p>
-            </div>
-            <div>
-              <i class="fa-solid fa-envelope"></i>
-              <p>
-                <a href="mailto:example@fylo.com"> example@fylo.com </a>
-              </p>
+            <div class="wrapper">
+              <div>
+                <i class="fa-solid fa-phone-volume"></i>
+                <p>+1-543-123-4567</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-envelope"></i>
+                <p>
+                  <a href="mailto:example@fylo.com"> example@fylo.com </a>
+                </p>
+              </div>
             </div>
           </div>
 
