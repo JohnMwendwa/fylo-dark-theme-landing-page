@@ -62,15 +62,17 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
-header .logo img {
-  width: 80%;
+header .logo {
+  width: 100px;
 }
 
 header nav ul {
   display: flex;
-  gap: 2rem;
+  justify-content: flex-end;
+  gap: 1rem;
   list-style: none;
 }
 
@@ -79,6 +81,7 @@ header nav ul li a {
   color: var(--dark-gray);
   text-decoration: none;
   transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
 header nav ul li a:hover {
@@ -87,8 +90,11 @@ header nav ul li a:hover {
 }
 
 @media screen and (min-width: 640px) {
-  header .logo img {
-    width: 100%;
+  header .logo {
+    width: unset;
+  }
+  header nav ul {
+    gap: 2rem;
   }
 }
 
@@ -106,16 +112,11 @@ header nav ul li a:hover {
   background-position: bottom -1% right;
   background-size: 100%;
   padding-bottom: 10rem;
-}
-
-@media screen and (min-width: 640px) {
-  .hero {
-    background-image: url("./images/bg-curvy-desktop.svg");
-  }
+  padding-inline: 1.5rem;
 }
 
 .hero h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   max-width: 25rem;
   text-align: center;
   margin: 0 auto;
@@ -130,7 +131,7 @@ header nav ul li a:hover {
 
 .hero .content p {
   max-width: 35rem;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--dark-gray);
   margin: 0 auto;
 }
@@ -155,9 +156,17 @@ header nav ul li a:hover {
 }
 
 @media screen and (min-width: 640px) {
+  .hero {
+    background-image: url("./images/bg-curvy-desktop.svg");
+  }
+
   .hero h1 {
     font-size: 2.5rem;
     max-width: 45rem;
+  }
+
+  .hero .content p {
+    font-size: 1.125rem;
   }
 }
 
@@ -174,7 +183,7 @@ main {
   grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
   align-items: center;
 }
 
@@ -184,27 +193,28 @@ main {
   align-items: center;
   text-align: center;
   gap: 1rem;
-  padding: 2rem;
-}
-
-.feature:nth-child(odd) {
-  justify-self: end;
-}
-
-.feature:nth-child(even) {
-  justify-self: start;
 }
 
 .feature p {
   color: var(--dark-gray);
-
   max-width: 23.5rem;
 }
 
 @media screen and (min-width: 640px) {
   .features {
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+  }
+
+  .feature:nth-child(odd) {
+    justify-self: end;
+  }
+
+  .feature:nth-child(even) {
+    justify-self: start;
+  }
+
+  .feature {
+    padding: 2rem;
   }
 }
 
@@ -358,7 +368,7 @@ footer .form {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--primary-dark-blue-testimonials);
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 1rem;
   color: var(--white);
   text-align: center;
@@ -424,6 +434,10 @@ footer .form button:hover {
 @media screen and (min-width: 768px) {
   footer {
     padding-top: 8rem;
+  }
+
+  footer .form {
+    padding: 3rem;
   }
 
   footer .form h2 {
